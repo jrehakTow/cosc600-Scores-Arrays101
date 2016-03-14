@@ -6,7 +6,7 @@
  * 
  * */
 
-public class scores{
+public class ScoreKeeper{
   
   public static void main(String[] args){
     //the variables
