@@ -7,23 +7,21 @@
  * */
 
 public class ScoreKeeper{
-	int sum = 0;//for the sum
-    int average = 0; //for the average
+	int sum = 0;
+    int average = 0; 
     
-    int[] scores = new int[10]; //create an array of 10 scores
-    char[] gradeAssignments = new char[10]; //array of O's, S's, and U's 
+    int[] scores = new int[10]; 
+    char[] gradeAssignments = new char[10]; 
     
-    
-    //the meat
+
     public void averageScores(){
-    	for(int i=0; i<10; i++){ //sums and averages the score array
-      
+    	for(int i=0; i<10; i++){ 
     		sum = sum + scores[i];
-    		average = sum/(i+1);//finds the average, put in the loop for dif amounts of scores
+    		average = sum/(i+1);
     	}
     }
     
-    //the grader
+
     public void assignGrade(){
     	for(int i=0; i<10; i++){
     		if(scores[i] <= (average * 0.1 + average) && scores[i] >= (average - average * 0.1)){
@@ -33,11 +31,9 @@ public class ScoreKeeper{
     			gradeAssignments[i] = 'O';
     		}
     		else gradeAssignments[i] = 'U';                 
-    	}//asigns grades to the_OSUs array
+    	}
     }
     
-    
-    //testing
     public void printAllScores(){
     	System.out.println("Average: " + average);
     	for(int i=0; i<10; i++){
@@ -66,4 +62,4 @@ public class ScoreKeeper{
 	    fallScores.printAllScores();
     
   }
-}//end program
+}
