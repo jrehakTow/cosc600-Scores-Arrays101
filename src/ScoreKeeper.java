@@ -8,7 +8,7 @@
 
 public class ScoreKeeper{
 	int sum = 0;//for the sum
-    int average =0; //for the average
+    int average = 0; //for the average
     
     int[] the_scores = new int[10]; //create an array of 10 scores
     char[] the_OSUs = new char[10]; //array of O's, S's, and U's 
@@ -58,6 +58,12 @@ public class ScoreKeeper{
 	    fallScores.the_scores[7] = 83;
 	    fallScores.the_scores[8] = 99;
 	    fallScores.the_scores[9] = 52;
+	    
+	    fallScores.averageScores();
+	    
+	    fallScores.assignGrade();
+	    
+	    fallScores.printAllScores();
     
   }
 }//end program
