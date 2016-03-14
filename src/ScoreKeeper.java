@@ -44,22 +44,22 @@ public class ScoreKeeper{
   public static void main(String[] args){
 	  ScoreKeeper fallScores = new ScoreKeeper();
 	  
-	    fallScores.scores[0] = 55;
-	    fallScores.scores[1] = 98;
-	    fallScores.scores[2] = 89;
-	    fallScores.scores[3] = 62;
-	    fallScores.scores[4] = 78;
-	    fallScores.scores[5] = 69;
-	    fallScores.scores[6] = 91;
-	    fallScores.scores[7] = 83;
-	    fallScores.scores[8] = 99;
-	    fallScores.scores[9] = 52;
+	  fallScores.scores[0] = 55;
+	  fallScores.scores[1] = 98;
+	  fallScores.scores[2] = 89;
+	  fallScores.scores[3] = 62;
+	  fallScores.scores[4] = 78;
+	  fallScores.scores[5] = 69;
+	  fallScores.scores[6] = 91;
+	  fallScores.scores[7] = 83;
+	  fallScores.scores[8] = 99;
+	  fallScores.scores[9] = 52;
 	    
-	    fallScores.averageScores();
+	  fallScores.averageScores();
 	    
-	    fallScores.assignGrade();
+	  fallScores.assignGrade();
 	    
-	    fallScores.printAllScores();
+	  fallScores.printAllScores();
     
   }
 }
