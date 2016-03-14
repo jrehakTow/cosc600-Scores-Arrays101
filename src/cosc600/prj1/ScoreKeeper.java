@@ -16,14 +16,14 @@ public class ScoreKeeper{
     char[] gradeAssignments = new char[10]; 
 
     public void averageScores(){
-    	for(int i=0; i<10; i++){ 
+    	for(int i=0; i<scores.length; i++){ 
     		sum = sum + scores[i];
     		average = sum/(i+1);
     	}
     }
 
     public void assignGrade(){
-    	for(int i=0; i<10; i++){
+    	for(int i=0; i<scores.length; i++){
     		if(scores[i] <= (average * 0.1 + average) && scores[i] >= (average - average * 0.1)){
     			gradeAssignments[i] = 'S';
     		}
@@ -36,7 +36,7 @@ public class ScoreKeeper{
     
     public void printAllScores(){
     	System.out.println("Average: " + average);
-    	for(int i=0; i<10; i++){
+    	for(int i=0; i<scores.length; i++){
     		System.out.println(scores[i] + " " + gradeAssignments[i]);
     	}
     }
