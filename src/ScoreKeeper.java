@@ -10,15 +10,15 @@ public class ScoreKeeper{
 	int sum = 0;//for the sum
     int average = 0; //for the average
     
-    int[] the_scores = new int[10]; //create an array of 10 scores
-    char[] the_OSUs = new char[10]; //array of O's, S's, and U's 
+    int[] scores = new int[10]; //create an array of 10 scores
+    char[] gradeAssignments = new char[10]; //array of O's, S's, and U's 
     
     
     //the meat
     public void averageScores(){
     	for(int i=0; i<10; i++){ //sums and averages the score array
       
-    		sum = sum + the_scores[i];
+    		sum = sum + scores[i];
     		average = sum/(i+1);//finds the average, put in the loop for dif amounts of scores
     	}
     }
@@ -26,13 +26,13 @@ public class ScoreKeeper{
     //the grader
     public void assignGrade(){
     	for(int i=0; i<10; i++){
-    		if(the_scores[i] <= (average * 0.1 + average) && the_scores[i] >= (average - average * 0.1)){
-    			the_OSUs[i] = 'S';
+    		if(scores[i] <= (average * 0.1 + average) && scores[i] >= (average - average * 0.1)){
+    			gradeAssignments[i] = 'S';
     		}
-    		else if(the_scores[i] > (average * 0.1 + average)){
-    			the_OSUs[i] = 'O';
+    		else if(scores[i] > (average * 0.1 + average)){
+    			gradeAssignments[i] = 'O';
     		}
-    		else the_OSUs[i] = 'U';                 
+    		else gradeAssignments[i] = 'U';                 
     	}//asigns grades to the_OSUs array
     }
     
@@ -41,23 +41,23 @@ public class ScoreKeeper{
     public void printAllScores(){
     	System.out.println("Average: " + average);
     	for(int i=0; i<10; i++){
-    		System.out.println(the_scores[i] + " " + the_OSUs[i]);
+    		System.out.println(scores[i] + " " + gradeAssignments[i]);
     	}
     }
   
   public static void main(String[] args){
 	  ScoreKeeper fallScores = new ScoreKeeper();
 	  
-	    fallScores.the_scores[0] = 55;
-	    fallScores.the_scores[1] = 98;
-	    fallScores.the_scores[2] = 89;
-	    fallScores.the_scores[3] = 62;
-	    fallScores.the_scores[4] = 78;
-	    fallScores.the_scores[5] = 69;
-	    fallScores.the_scores[6] = 91;
-	    fallScores.the_scores[7] = 83;
-	    fallScores.the_scores[8] = 99;
-	    fallScores.the_scores[9] = 52;
+	    fallScores.scores[0] = 55;
+	    fallScores.scores[1] = 98;
+	    fallScores.scores[2] = 89;
+	    fallScores.scores[3] = 62;
+	    fallScores.scores[4] = 78;
+	    fallScores.scores[5] = 69;
+	    fallScores.scores[6] = 91;
+	    fallScores.scores[7] = 83;
+	    fallScores.scores[8] = 99;
+	    fallScores.scores[9] = 52;
 	    
 	    fallScores.averageScores();
 	    
