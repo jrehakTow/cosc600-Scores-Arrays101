@@ -12,8 +12,13 @@ public class ScoreKeeper{
 	int sum = 0;
     int average = 0; 
     
-    int[] scores = new int[10]; 
-    char[] gradeAssignments = new char[10]; 
+    int[] scores = new int[0]; 
+    char[] gradeAssignments = new char[0]; 
+    
+    public void setNumberOfScores(int numberOfScores){
+    	scores = new int[numberOfScores];
+    	gradeAssignments = new char[numberOfScores];
+    }
 
     public void averageScores(){
     	for(int i=0; i<scores.length; i++){ 
@@ -43,6 +48,8 @@ public class ScoreKeeper{
   
   public static void main(String[] args){
 	  ScoreKeeper fallScores = new ScoreKeeper();
+	  
+	  fallScores.setNumberOfScores(10);
 	  
 	  fallScores.scores[0] = 55;
 	  fallScores.scores[1] = 98;
