@@ -6,13 +6,14 @@
  * 
  * */
 
+package cosc600.prj1;
+
 public class ScoreKeeper{
 	int sum = 0;
     int average = 0; 
     
     int[] scores = new int[10]; 
     char[] gradeAssignments = new char[10]; 
-    
 
     public void averageScores(){
     	for(int i=0; i<10; i++){ 
@@ -20,7 +21,6 @@ public class ScoreKeeper{
     		average = sum/(i+1);
     	}
     }
-    
 
     public void assignGrade(){
     	for(int i=0; i<10; i++){
